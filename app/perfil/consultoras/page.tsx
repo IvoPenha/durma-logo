@@ -33,9 +33,8 @@ async function getMe() {
 }
 
 export default function ConsultoraPerfilPage() {
-  const [defaultValues, setDefaultValues] = useState<ConsultorFormValues>(
-    {} as ConsultorFormValues
-  );
+  const [defaultValues, setDefaultValues] =
+    useState<ConsultorFormValues | null>(null);
 
   async function fetchInitialData() {
     const me = await getMe();
@@ -46,7 +45,9 @@ export default function ConsultoraPerfilPage() {
     fetchInitialData();
   }, []);
 
-  return (
-    defaultValues && <ConsultoraPerfilForm defaultValues={defaultValues} />
-  );
+  if (!defaultValues) {
+    return <div>Loading...</div>; // Handle loading state
+  }
+
+  return <ConsultoraPerfilForm defaultValues={defaultValues} />;
 }

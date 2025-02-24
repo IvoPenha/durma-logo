@@ -1,16 +1,17 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/toaster";
-import { Header } from '@/components/header'; 
+import { ThemeProvider } from '@/components/theme-provider';
+import { Toaster } from '@/components/ui/toaster';
+import { Header } from '@/components/header';
 import { QueryClientProvider } from '@/lib/react-query';
-const inter = Inter({ subsets: ['latin'] });
+import { Inter } from 'next/font/google';
 
 export const metadata: Metadata = {
   title: 'Dorme Logo - Consultoria de Sono Infantil',
   description: 'Conectando pais a consultores de sono infantil qualificados',
 };
+
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -20,8 +21,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body className={inter.className}>
-        <QueryClientProvider
-        >  
+        <QueryClientProvider>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -33,7 +33,6 @@ export default function RootLayout({
             <Toaster />
           </ThemeProvider>
         </QueryClientProvider>
-
       </body>
     </html>
   );

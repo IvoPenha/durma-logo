@@ -47,7 +47,6 @@ export default function ConsultoraPerfilForm({
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="text-lg font-semibold">65%</span>
             </div>
-            <Progress value={65} className="h-full w-full rounded-full" />
           </div>
         </div>
 
