@@ -6,12 +6,16 @@ import { Check, ChevronDown, ChevronUp } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
+/** @deprecated use ui/form/form-element with the type = 'select' instead */
 const Select = SelectPrimitive.Root;
 
+/** @deprecated use ui/form/form-element with the type = 'select' instead */
 const SelectGroup = SelectPrimitive.Group;
 
+/** @deprecated use ui/form/form-element with the type = 'select' instead */
 const SelectValue = SelectPrimitive.Value;
 
+/** @deprecated use ui/form/form-element with the type = 'select' instead */
 const SelectTrigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
@@ -32,6 +36,7 @@ const SelectTrigger = React.forwardRef<
 ));
 SelectTrigger.displayName = SelectPrimitive.Trigger.displayName;
 
+/** @deprecated use ui/form/form-element with the type = 'select' instead */
 const SelectScrollUpButton = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.ScrollUpButton>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollUpButton>
@@ -67,6 +72,7 @@ const SelectScrollDownButton = React.forwardRef<
 SelectScrollDownButton.displayName =
   SelectPrimitive.ScrollDownButton.displayName;
 
+/** @deprecated use ui/form/form-element with the type = 'select' instead */
 const SelectContent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
@@ -111,6 +117,7 @@ const SelectLabel = React.forwardRef<
 ));
 SelectLabel.displayName = SelectPrimitive.Label.displayName;
 
+/** @deprecated use ui/form/form-element with the type = 'select' instead */
 const SelectItem = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
@@ -146,6 +153,7 @@ const SelectSeparator = React.forwardRef<
 ));
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
 
+/** @deprecated use ui/form/form-element with the type = 'select' instead */
 export {
   Select,
   SelectGroup,
